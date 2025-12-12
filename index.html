@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吳夫人潘祝女士 告別式公告</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f7f7f7;
+            --text-color: #333;
+            --accent-color: #8c7b6d; /* 莊重的深金/棕色 */
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        body {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            /* 背景圖更新 */
+            background-image: url('https://niurl.cc/uploads//images/1765319653911-IMG_6057.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5); /* 加深遮罩讓文字更清楚 */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 裝飾用的浮水印花紋 */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/flower-trail.png');
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 照片區域 */
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: #000;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        .main-text {
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .info-box {
+            background-color: rgba(240, 240, 240, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 20px 0;
+            padding: 10px;
+            border-top: 1px dashed #ccc;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #6e6056;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-share {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .btn-share:hover {
+            background-color: #333;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .contact-info {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.6); 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 320px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .share-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .share-option {
+            display: block;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+        }
+
+        .share-option:hover {
+            opacity: 0.9;
+        }
+
+        .bg-line { background-color: #00B900; }
+        .bg-messenger { background-color: #0084FF; }
+        .bg-sms { background-color: #6c757d; }
+        .bg-copy { 
+            background-color: transparent; 
+            color: #555; 
+            border: 1px solid #ccc;
+        }
+
+        /* 手機版優化 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="container">
+            <div class="content">
+                <div class="photo-frame">
+                    <!-- 照片更新 -->
+                    <img src="https://niurl.cc/uploads//images/1765319653911-IMG_6057.jpeg" alt="吳夫人潘祝女士">
+                </div>
+
+                <h1>親朋好友泰安</h1>
+                <h2>吳夫人潘祝女士 訃告</h2>
+
+                <div class="main-text">
+                    <p>先母已於日前安然離世，圓滿告別此生。因生前好友眾多，我們未必認識每位好友，無法逐一告知。若聞訊後有意前來上香追思者，本家皆感念並誠摯接待。</p>
+                </div>
+
+                <div class="info-box">
+                    <!-- 新增：靈堂資訊 -->
+                    <div class="info-item">
+                        <span class="info-label">靈堂資訊</span>
+                        <div class="info-value">地點：新北市板橋區僑中一街124巷11弄2號</div>
+                        <div class="info-value">時間：114年11月23日至114年12月25日</div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">告別式時間</span>
+                        <div class="info-value">114年 12月 29日 (星期一)</div>
+                        <div style="font-size: 0.9em; color: #666;">農曆十一月初十</div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-label">儀式流程</span>
+                        <div class="info-value">家奠：上午 07:30</div>
+                        <div class="info-value">公奠：上午 08:00</div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">告別式地點</span>
+                        <div class="info-value">新北市立板橋殯儀館 - 崇義廳</div>
+                        <div style="font-size: 0.9em; margin-top:5px;">新北市板橋區中正路 560 號</div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <a href="https://www.google.com/maps/search/?api=1&query=僑中一街124巷11弄2號" target="_blank" class="btn">
+                        📍 靈堂導航
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=新北市立板橋殯儀館" target="_blank" class="btn">
+                        📍 殯儀館導航
+                    </a>
+                </div>
+                <div class="btn-group" style="margin-top: 10px;">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=吳夫人潘祝女士告別式&dates=20251228T233000Z/20251229T020000Z&details=地點：新北市立板橋殯儀館-崇義廳&location=新北市板橋區中正路560號" target="_blank" class="btn btn-outline" style="width: 100%;">
+                        📅 加入行事曆
+                    </a>
+                </div>
+                
+                <!-- 新增：分享按鈕 -->
+                <div class="btn-group" style="margin-top: 10px;">
+                    <button onclick="openShareModal()" class="btn-share">
+                        📤 分享此訃聞給好友
+                    </button>
+                </div>
+
+                <div class="note">
+                    <p><strong>特別懇辭</strong></p>
+                    <p>純佛禮儀一切從簡，懇辭：<br>花籃、花圈、花車、陣頭、罐頭、輓聯</p>
+                </div>
+
+                <div class="footer">
+                    <p>感謝您的關心與情誼</p>
+                    <p>以致敬禮 <strong>吳家全體家屬 敬啟</strong></p>
+                    <span class="contact-info">聯絡電話：(02) 2969-1516</span>
+                    <br>
+                    <p style="font-size: 0.8em; margin-top: 10px;">靈堂設於家中，治喪期間，如有打擾，敬請見諒</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享視窗 (Modal) -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeShareModal()">&times;</span>
+            <h3 style="margin: 0; font-size: 1.2rem; color: #333;">分享訃聞</h3>
+            <div class="share-options">
+                <a href="#" id="shareLine" target="_blank" class="share-option bg-line">LINE</a>
+                <a href="#" id="shareMessenger" class="share-option bg-messenger">Facebook Messenger</a>
+                <a href="#" id="shareSMS" class="share-option bg-sms">簡訊 (SMS)</a>
+                <button onclick="copyLink()" class="share-option bg-copy">複製連結</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 設定分享連結
+        function openShareModal() {
+            var url = window.location.href;
+            var text = document.title + "\n";
+            
+            // 1. Line
+            // Line URL Scheme: https://line.me/R/msg/text/?{text}
+            document.getElementById('shareLine').href = "https://line.me/R/msg/text/?" + encodeURIComponent(text + url);
+            
+            // 2. Messenger
+            // Mobile: fb-messenger://share/?link={url}
+            // 備註：在電腦版點擊可能無效，主要針對手機 App
+            document.getElementById('shareMessenger').href = "fb-messenger://share/?link=" + encodeURIComponent(url);
+
+            // 3. SMS
+            // 判斷 iOS 或 Android 使用不同的分隔符
+            var ua = navigator.userAgent.toLowerCase();
+            var separator = (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1) ? "&" : "?";
+            document.getElementById('shareSMS').href = "sms:" + separator + "body=" + encodeURIComponent(text + url);
+
+            // 顯示視窗
+            document.getElementById('shareModal').style.display = "flex";
+        }
+
+        function closeShareModal() {
+            document.getElementById('shareModal').style.display = "none";
+        }
+
+        // 點擊視窗外圍關閉
+        window.onclick = function(event) {
+            var modal = document.getElementById('shareModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function copyLink() {
+            var dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert('連結已複製到剪貼簿');
+            closeShareModal();
+        }
+    </script>
+</body>
+</html>
